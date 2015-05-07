@@ -48,3 +48,16 @@
 (define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
 (define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
 (global-set-key [escape] 'evil-exit-emacs-state)
+
+
+; ------------------------------------------
+; Appearance
+; ------------------------------------------
+; Don't display the ugly startup message (particularly ugly in the GUI)
+(setq inhibit-startup-message t)
+
+; No toolbar
+(tool-bar-mode -1)
+
+; Get rid of the butt ugly OSX scrollbars in GUI
+(when (display-graphic-p) (set-scroll-bar-mode nil))
