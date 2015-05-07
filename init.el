@@ -61,3 +61,12 @@
 
 ; Get rid of the butt ugly OSX scrollbars in GUI
 (when (display-graphic-p) (set-scroll-bar-mode nil))
+
+; Set cursor colours depending on mode
+(when (display-graphic-p)
+  (setq evil-emacs-state-cursor '("red" box))
+  (setq evil-normal-state-cursor '("green" box))
+  (setq evil-visual-state-cursor '("orange" box))
+  (setq evil-insert-state-cursor '("red" bar))
+  (setq evil-replace-state-cursor '("red" bar))
+  (setq evil-operator-state-cursor '("red" hollow)))
