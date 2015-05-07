@@ -40,6 +40,7 @@
 ; ------------------------------------------
 ; Key mappings
 ; ------------------------------------------
+; Escape as a universal cancel
 (define-key evil-normal-state-map [escape] 'keyboard-quit)
 (define-key evil-visual-state-map [escape] 'keyboard-quit)
 (define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
@@ -48,7 +49,6 @@
 (define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
 (define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
 (global-set-key [escape] 'evil-exit-emacs-state)
-
 
 ; ------------------------------------------
 ; Appearance
