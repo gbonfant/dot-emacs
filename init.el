@@ -74,3 +74,7 @@
   (setq evil-insert-state-cursor '("red" bar))
   (setq evil-replace-state-cursor '("red" bar))
   (setq evil-operator-state-cursor '("red" hollow)))
+
+(custom-set-variables
+  ; Start in fullscreen
+  '(initial-frame-alist (quote ((fullscreen . maximized)))))
