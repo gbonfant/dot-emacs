@@ -8,13 +8,11 @@
 ; Initialise the package manager
 (package-initialize)
 
-; ------------------------------------------
 ; Install packages if they are not installed
-; ------------------------------------------
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(evil company))
+(defvar my-packages '(evil solarized-theme))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
@@ -61,6 +59,12 @@
 
 ; Get rid of the butt ugly OSX scrollbars in GUI
 (when (display-graphic-p) (set-scroll-bar-mode nil))
+
+; Use solarized dark (in GUI)
+(when (display-graphic-p) (load-theme 'solarized-dark t))
+
+; Use Incosolata 14pt in GUI
+(when (display-graphic-p) (set-face-attribute 'default nil :font "Inconsolata-16"))
 
 ; Set cursor colours depending on mode
 (when (display-graphic-p)
